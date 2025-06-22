@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSift - Part of CyberSuite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #111827; /* Dark gray */
+            color: #D1D5DB; /* Light gray for text */
+        }
+        .download-btn {
+            background-color: #1E3A8A; /* Midnight Blue */
+            color: white;
+        }
+        .download-btn:hover {
+            background-color: #F97316; /* Burnt Orange */
+        }
+        .header-font {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        a {
+            color: #F97316; /* Burnt Orange for links */
+        }
+        a:hover {
+            color: #D97706;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-[#1E3A8A] text-white py-6 text-center">
+        <h1 class="text-4xl font-bold header-font">CyberSift</h1>
+        <p class="mt-2 text-lg">Sift the Network, Uncover Assets | Part of <a href="../">CyberSuite</a></p>
+    </header>
+
+    <!-- Introduction -->
+    <section class="max-w-4xl mx-auto py-10">
+        <h2 class="text-3xl font-semibold text-[#D1D5DB] mb-4">Welcome to CyberSift!</h2>
+        <p class="text-lg leading-relaxed">
+            CyberSift, a cornerstone of the CyberSuite collection, is a powerful reconnaissance tool for discovering domains, subdomains, and sensitive endpoints. Use it to uncover network assets, identify related domains across TLDs, and generate detailed reports. Download the tool, sample outputs, and wordlists below to get started. Ready to sift the cyber world? 😎
+        </p>
+    </section>
+
+    <!-- Downloadable Resources -->
+    <section class="max-w-4xl mx-auto py-10">
+        <h2 class="text-3xl font-semibold text-[#D1D5DB] mb-4">Download Resources</h2>
+        <ul id="download-list" class="space-y-4">
+            <li class="flex justify-between items-center bg-[#1F2937] p-4 rounded-lg shadow">
+                <span>CyberSift Tool (cybersift.py)</span>
+                <a href="../../files/cybersift.py" download class="download-btn px-4 py-2 rounded">Download</a>
+            </li>
+            <li class="flex justify-between items-center bg-[#1F2937] p-4 rounded-lg shadow">
+                <span>Assets List (assets.txt)</span>
+                <a href="../../files/assets.txt" download class="download-btn px-4 py-2 rounded">Download</a>
+            </li>
+            <li class="flex justify-between items-center bg-[#1F2937] p-4 rounded-lg shadow">
+                <span>Subdomains List (subdomains.txt)</span>
+                <a href="../../files/subdomains.txt" download class="download-btn px-4 py-2 rounded">Download</a>
+            </li>
+            <li class="flex justify-between items-center bg-[#1F2937] p-4 rounded-lg shadow">
+                <span>Vulnerabilities List (vulnerabilities.csv)</span>
+                <a href="../../files/vulnerabilities.csv" download class="download-btn px-4 py-2 rounded">Download</a>
+            </li>
+            <li class="flex justify-between items-center bg-[#1F2937] p-4 rounded-lg shadow">
+                <span>Subdomain Wordlist (subdomains-top1million-5000.txt)</span>
+                <a href="../../wordlists/subdomains-top1million-5000.txt" download class="download-btn px-4 py-2 rounded">Download</a>
+            </li>
+            <li class="flex justify-between items-center bg-[#1F2937] p-4 rounded-lg shadow">
+                <span>Vulnerability Wordlist (wordlist-for-check-vulnerability.txt)</span>
+                <a href="../../wordlists/wordlist-for-check-vulnerability.txt" download class="download-btn px-4 py-2 rounded">Download</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Usage Guide -->
+    <section class="max-w-4xl mx-auto py-10">
+        <h2 class="text-3xl font-semibold text-[#D1D5DB] mb-4">Usage Guide</h2>
+        <div class="bg-[#1F2937] p-6 rounded-lg shadow">
+            <h3 class="text-2xl font-medium mb-2">How to Use CyberSift</h3>
+            <ol class="list-decimal ml-6 space-y-2">
+                <li>Download the CyberSift tool from <a href="../../files/cybersift.py">here</a>.</li>
+                <li>Grab sample outputs (e.g., assets.txt or subdomains.txt) and wordlists from the section above.</li>
+                <li>Install required dependencies:
+                    <pre class="bg-[#111827] p-2 rounded text-[#D1D5DB]">python cybersift.py -i</pre>
+                </li>
+                <li>Run the tool with this command:
+                    <pre class="bg-[#111827] p-2 rounded text-[#D1D5DB]">python cybersift.py -f domain.txt -o recon_results -c -np -t 20</pre>
+                </li>
+                <li>Create a domain.txt file with your target domain (e.g., example.com).</li>
+                <li>Outputs (e.g., assets.txt, report-example.com.html) are saved in the recon_results folder.</li>
+                <li>For questions, open an issue on <a href="https://github.com/idovedu/CyberSuite/issues">GitHub Issues</a>.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1E3A8A] text-white py-4 text-center">
+        <p>© 2025 idovedu | Built with 💻 and ☕</p>
+        <p><a href="https://github.com/idovedu/CyberSuite/issues" class="underline">Report Issues</a></p>
+    </footer>
+
+    <script>
+        // Simple download feedback
+        document.querySelectorAll('.download-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Downloading file...');
+            });
+        });
+    </script>
+</body>
+</html>
