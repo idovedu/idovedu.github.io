@@ -1,0 +1,4 @@
+example.com
+example.org
+admin.example.net
+www.example.net
