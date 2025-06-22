@@ -1,0 +1,10 @@
+www
+mail
+ftp
+admin
+login
+api
+test
+dev
+staging
+beta
